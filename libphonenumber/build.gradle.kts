@@ -176,14 +176,14 @@ apply(from = "$rootDir/gradle/pack-library-test-resources.gradle.kts")
 
 // not sure why only native+android has a gradle dependency order issue when publishing
 // possibly related to https://github.com/icerockdev/moko-resources/issues/535
-tasks.getByName("iosX64SourcesJar").dependsOn("generateMRiosX64Main")
-tasks.getByName("iosArm64SourcesJar").dependsOn("generateMRiosArm64Main")
-tasks.getByName("iosSimulatorArm64SourcesJar").dependsOn("generateMRiosSimulatorArm64Main")
-tasks.getByName("macosArm64SourcesJar").dependsOn("generateMRmacosArm64Main")
-tasks.getByName("macosX64SourcesJar").dependsOn("generateMRmacosX64Main")
-// https://github.com/icerockdev/moko-resources/issues/421#issuecomment-1662005955
-afterEvaluate {
-    tasks.named("androidReleaseSourcesJar") {
-        dependsOn("generateMRandroidMain")
-    }
-}
+//tasks.getByName("iosX64SourcesJar").dependsOn("generateMRiosX64Main")
+//tasks.getByName("iosArm64SourcesJar").dependsOn("generateMRiosArm64Main")
+//tasks.getByName("iosSimulatorArm64SourcesJar").dependsOn("generateMRiosSimulatorArm64Main")
+//tasks.getByName("macosArm64SourcesJar").dependsOn("generateMRmacosArm64Main")
+//tasks.getByName("macosX64SourcesJar").dependsOn("generateMRmacosX64Main")
+//// https://github.com/icerockdev/moko-resources/issues/421#issuecomment-1662005955
+//afterEvaluate {
+//    tasks.named("androidReleaseSourcesJar") {
+//        dependsOn("generateMRandroidMain")
+//    }
+//}
